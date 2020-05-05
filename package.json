@@ -1,0 +1,17 @@
+{
+  "name": "call-of-duty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "call-of-duty-api": "^1.1.14",
+    "db-migrate": "^0.11.11",
+    "pg": "^8.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
