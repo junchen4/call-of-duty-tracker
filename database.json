@@ -1,7 +1,11 @@
 {
   "dev": {
     "driver": "pg",
-    "filename": "~/dev.db"
+    "user": "junchen",
+    "password": "",
+    "host": "localhost",
+    "database": "callofduty",
+    "port": "5432"
   },
 
   "test": {
@@ -17,19 +21,12 @@
 
   "pg": {
     "driver": "pg",
-    "user": "test",
-    "password": "test",
+    "user": "junchen",
+    "password": "",
     "host": "localhost",
-    "database": "mydb",
-    "port": "20144",
-    "ssl": "true",
-    "schema": "my_schema"
-  },
-
-  "mongo": {
-    "driver": "mongodb",
-    "database": "my_db",
-    "host": "localhost"
+    "database": "callofduty",
+    "port": "5432",
+    "ssl": "true"
   },
 
   "other": "postgres://uname:pw@server.com/dbname"
