@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
 	res.end('Welcome to Call of Duty Stats service!');
 });
 
-server.listen(process.env.APP_PORT, process.env.APP_HOST, () => {
+server.listen(process.env.APP_HOST, () => {
   console.log(`Server running at http://${process.env.APP_HOST}:${process.env.APP_PORT}/`);
 });
 
