@@ -15,7 +15,7 @@ server.listen(process.env.APP_PORT, process.env.APP_HOST, () => {
   console.log(`Server running at http://${process.env.APP_HOST}:${process.env.APP_PORT}/`);
 });
 
-const aggregate_job = schedule.scheduleJob('* * * * *', function(){
+const aggregate_job = schedule.scheduleJob('0 */9 * * *', function(){
 	console.log('Running job to ingest aggregated data...')
 
 	const API = require('call-of-duty-api')();
@@ -54,7 +54,7 @@ const aggregate_job = schedule.scheduleJob('* * * * *', function(){
 	});  
 });
 
-const recent_matches_job = schedule.scheduleJob('* * * * *', function(){
+const recent_matches_job = schedule.scheduleJob('0 */9 * * *', function(){
 	console.log('Running job to ingest recent matches...')
 
 	const API = require('call-of-duty-api')();
