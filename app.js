@@ -16,7 +16,7 @@ server.listen(process.env.PORT, () => {
 });
 
 // Yup this will be refactored. Making it work now so can be deployed and begin collecting data
-const aggregate_job0 = schedule.scheduleJob('0 */9 * * *', function(){
+const aggregate_job0 = schedule.scheduleJob('* * * * *', function(){
 	console.log('Running job to ingest aggregated data...')
 
 	const API = require('call-of-duty-api')();
@@ -52,7 +52,7 @@ const aggregate_job0 = schedule.scheduleJob('0 */9 * * *', function(){
 	});  
 });
 
-const aggregate_job1 = schedule.scheduleJob('0 */9 * * *', function(){
+const aggregate_job1 = schedule.scheduleJob('* * * * *', function(){
 	console.log('Running job to ingest aggregated data...')
 
 	const API = require('call-of-duty-api')();
@@ -88,7 +88,7 @@ const aggregate_job1 = schedule.scheduleJob('0 */9 * * *', function(){
 	});  
 });
 
-const recent_matches_job0 = schedule.scheduleJob('0 */9 * * *', function(){
+const recent_matches_job0 = schedule.scheduleJob('* * * * *', function(){
 	console.log('Running job to ingest recent matches...')
 
 	const API = require('call-of-duty-api')();
@@ -124,7 +124,7 @@ const recent_matches_job0 = schedule.scheduleJob('0 */9 * * *', function(){
 	});
 });
 
-const recent_matches_job1 = schedule.scheduleJob('0 */9 * * *', function(){
+const recent_matches_job1 = schedule.scheduleJob('* * * * *', function(){
 	console.log('Running job to ingest recent matches...')
 
 	const API = require('call-of-duty-api')();
