@@ -15,8 +15,11 @@ server.listen(process.env.PORT, () => {
   console.log(`Server running at http://${process.env.HOST}:${process.env.PORT}/`);
 });
 
+var rule = new schedule.RecurrenceRule();
+rule.hour = 5;
+
 // Yup this will be refactored. Making it work now so can be deployed and begin collecting data
-const aggregate_job0 = schedule.scheduleJob('42 * * * *', function(){
+const aggregate_job0 = schedule.scheduleJob(rule, function(){
 	console.log('Running job to ingest aggregated data...')
 
 	const API = require('call-of-duty-api')();
@@ -52,7 +55,7 @@ const aggregate_job0 = schedule.scheduleJob('42 * * * *', function(){
 	});  
 });
 
-const aggregate_job1 = schedule.scheduleJob('42 * * * *', function(){
+const aggregate_job1 = schedule.scheduleJob(rule, function(){
 	console.log('Running job to ingest aggregated data...')
 
 	const API = require('call-of-duty-api')();
@@ -88,7 +91,7 @@ const aggregate_job1 = schedule.scheduleJob('42 * * * *', function(){
 	});  
 });
 
-const recent_matches_job0 = schedule.scheduleJob('30 * * * *', function(){
+const recent_matches_job0 = schedule.scheduleJob(rule, function(){
 	console.log('Running job to ingest recent matches...')
 
 	const API = require('call-of-duty-api')();
@@ -124,7 +127,7 @@ const recent_matches_job0 = schedule.scheduleJob('30 * * * *', function(){
 	});
 });
 
-const recent_matches_job1 = schedule.scheduleJob('42 * * * *', function(){
+const recent_matches_job1 = schedule.scheduleJob(rule, function(){
 	console.log('Running job to ingest recent matches...')
 
 	const API = require('call-of-duty-api')();
